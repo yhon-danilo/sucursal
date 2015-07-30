@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Facturas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Observacion</th>
+      <th>Valor articulo</th>
+      <th>Sucursal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facturas.each do |factura| %>
+      <tr>
+        <td><%= factura.observacion %></td>
+        <td><%= factura.valor_articulo %></td>
+        <td><%= factura.sucursal.id %></td>
+        <td><%= link_to 'Show', sucursal_factura_path(@sucursal, factura) %></td>
+        <td><%= link_to 'Edit', edit_sucursal_factura_path(@sucursal, factura) %></td>
+        <td><%= link_to 'Destroy', sucursal_factura_path(@sucursal, factura), method: :delete, data: { confirm: 'Seguro lo deseas eliminar' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Factura', new_sucursal_factura_path %>

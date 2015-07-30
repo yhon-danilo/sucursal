@@ -1,0 +1,25 @@
+<%= form_for(@sucursal) do |f| %>
+  <% if @sucursal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sucursal.errors.count, "error") %> prohibited this sucursal from being saved:</h2>
+
+      <ul>
+      <% @sucursal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre_sucursal %><br>
+    <%= f.text_field :nombre_sucursal %>
+  </div>
+  <div class="field">
+    <%= f.label :total_ventas_dia %><br>
+    <%= f.text_field :total_ventas_dia %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

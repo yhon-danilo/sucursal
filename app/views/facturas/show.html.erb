@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Observacion:</strong>
+  <%= @factura.observacion %>
+</p>
+
+<p>
+  <strong>Valor articulo:</strong>
+  <%= @factura.valor_articulo %>
+</p>
+
+<p>
+  <strong>Sucursal:</strong>
+  <%= @factura.sucursal.id %>
+</p>
+
+<%= link_to 'Edit', edit_sucursal_factura_path(@sucursal, @factura) %> |
+<%= link_to 'Back', sucursal_facturas_path %>

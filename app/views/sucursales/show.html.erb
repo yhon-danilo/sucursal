@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre sucursal:</strong>
+  <%= @sucursal.nombre_sucursal %>
+</p>
+
+<p>
+  <strong>Total ventas dia:</strong>
+  <%= @sucursal.total_ventas_dia %>
+</p>
+
+<%= link_to 'Edit', edit_sucursal_path(@sucursal) %> |
+<%= link_to 'Back', sucursales_path %>
+<%= link_to 'Facturas', sucursal_facturas_path(@sucursal)%>
